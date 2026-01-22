@@ -1,0 +1,6 @@
+# Migrations Directory
+
+Place future database migration scripts here with naming convention:
+YYYY-MM-DD_description.sql
+
+Example: 2026-01-22_add_students_table.sql

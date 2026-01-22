@@ -1,0 +1,17 @@
+\\wsl.localhost\Ubuntu-24.04\home\opos\PROJECTES\evalis-web\DESKTOP_EVALIS\Evalis-Desktop\bin\Debug\net8.0-windows\Evalis-Desktop.exe
+\\wsl.localhost\Ubuntu-24.04\home\opos\PROJECTES\evalis-web\DESKTOP_EVALIS\Evalis-Desktop\bin\Debug\net8.0-windows\Evalis-Desktop.deps.json
+\\wsl.localhost\Ubuntu-24.04\home\opos\PROJECTES\evalis-web\DESKTOP_EVALIS\Evalis-Desktop\bin\Debug\net8.0-windows\Evalis-Desktop.runtimeconfig.json
+\\wsl.localhost\Ubuntu-24.04\home\opos\PROJECTES\evalis-web\DESKTOP_EVALIS\Evalis-Desktop\bin\Debug\net8.0-windows\Evalis-Desktop.dll
+\\wsl.localhost\Ubuntu-24.04\home\opos\PROJECTES\evalis-web\DESKTOP_EVALIS\Evalis-Desktop\bin\Debug\net8.0-windows\Evalis-Desktop.pdb
+\\wsl.localhost\Ubuntu-24.04\home\opos\PROJECTES\evalis-web\DESKTOP_EVALIS\Evalis-Desktop\obj\Debug\net8.0-windows\Evalis_Desktop.Form1.resources
+\\wsl.localhost\Ubuntu-24.04\home\opos\PROJECTES\evalis-web\DESKTOP_EVALIS\Evalis-Desktop\obj\Debug\net8.0-windows\Evalis-Desktop.vbproj.GenerateResource.cache
+\\wsl.localhost\Ubuntu-24.04\home\opos\PROJECTES\evalis-web\DESKTOP_EVALIS\Evalis-Desktop\obj\Debug\net8.0-windows\Evalis-Desktop.GeneratedMSBuildEditorConfig.editorconfig
+\\wsl.localhost\Ubuntu-24.04\home\opos\PROJECTES\evalis-web\DESKTOP_EVALIS\Evalis-Desktop\obj\Debug\net8.0-windows\Evalis-Desktop.AssemblyInfoInputs.cache
+\\wsl.localhost\Ubuntu-24.04\home\opos\PROJECTES\evalis-web\DESKTOP_EVALIS\Evalis-Desktop\obj\Debug\net8.0-windows\Evalis-Desktop.AssemblyInfo.vb
+\\wsl.localhost\Ubuntu-24.04\home\opos\PROJECTES\evalis-web\DESKTOP_EVALIS\Evalis-Desktop\obj\Debug\net8.0-windows\Evalis-Desktop.vbproj.CoreCompileInputs.cache
+\\wsl.localhost\Ubuntu-24.04\home\opos\PROJECTES\evalis-web\DESKTOP_EVALIS\Evalis-Desktop\obj\Debug\net8.0-windows\Evalis-Desktop.sourcelink.json
+\\wsl.localhost\Ubuntu-24.04\home\opos\PROJECTES\evalis-web\DESKTOP_EVALIS\Evalis-Desktop\obj\Debug\net8.0-windows\Evalis-Desktop.dll
+\\wsl.localhost\Ubuntu-24.04\home\opos\PROJECTES\evalis-web\DESKTOP_EVALIS\Evalis-Desktop\obj\Debug\net8.0-windows\refint\Evalis-Desktop.dll
+\\wsl.localhost\Ubuntu-24.04\home\opos\PROJECTES\evalis-web\DESKTOP_EVALIS\Evalis-Desktop\obj\Debug\net8.0-windows\Evalis-Desktop.pdb
+\\wsl.localhost\Ubuntu-24.04\home\opos\PROJECTES\evalis-web\DESKTOP_EVALIS\Evalis-Desktop\obj\Debug\net8.0-windows\Evalis-Desktop.genruntimeconfig.cache
+\\wsl.localhost\Ubuntu-24.04\home\opos\PROJECTES\evalis-web\DESKTOP_EVALIS\Evalis-Desktop\obj\Debug\net8.0-windows\ref\Evalis-Desktop.dll
