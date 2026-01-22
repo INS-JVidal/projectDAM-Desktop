@@ -1,0 +1,63 @@
+version: '3.8'
+
+# EVALIS PostgreSQL Database Container
+# Purpose: Containerize PostgreSQL database with automatic schema initialization
+# Usage: docker-compose up -d
+# Cleanup: docker-compose down -v (removes containers and volumes)
+
+services:
+  evalis-postgres:
+    # Build from Dockerfile in this directory
+    build:
+      context: ../../
+      dockerfile: database/docker/Dockerfile
+
+    # Container metadata
+    container_name: evalis-db
+    image: evalis-postgres:latest
+
+    # Port mapping: Host:Container (only expose to localhost)
+    ports:
+      - "5432:5432"
+
+    # Environment variables
+    environment:
+      POSTGRES_DB: evalis_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /var/lib/postgresql/data/pgdata
+      LANG: ca_ES.UTF-8
+      LC_COLLATE: ca_ES.UTF-8
+      LC_CTYPE: ca_ES.UTF-8
+
+    # Volumes
+    volumes:
+      # Persistent data volume - survives container restarts
+      - evalis_postgres_data:/var/lib/postgresql/data
+
+      # Mount initialization scripts (read-only)
+      - ../../database/init:/docker-entrypoint-initdb.d:ro
+
+    # Health check configuration
+    healthcheck:
+      # Use pg_isready to check if PostgreSQL accepts connections
+      test: ["CMD-SHELL", "pg_isready -U evalis_user -d evalis_db || exit 1"]
+      interval: 30s      # Check every 30 seconds
+      timeout: 5s        # Wait max 5 seconds for response
+      retries: 3         # Consider unhealthy after 3 failed checks
+      start_period: 60s  # Give 60 seconds for initial startup
+
+    # Restart policy
+    restart: unless-stopped
+
+    # Logging
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "3"
+
+# Named volume for persistent database storage
+volumes:
+  evalis_postgres_data:
+    driver: local

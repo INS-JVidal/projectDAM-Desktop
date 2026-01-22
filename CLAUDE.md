@@ -13,7 +13,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Academic document generation (bulletins, records, expedients)
 - Faculty portrait gallery management
 
-The application shares an external MySQL database (via XAMPP) with a companion Android mobile application.
+The application uses a PostgreSQL database running in Docker, with automatic container lifecycle management from the VB.NET application. The database is also compatible with a companion Android mobile application.
 
 ## Build and Development Commands
 
@@ -35,19 +35,33 @@ dotnet run --project Evalis-Desktop.vbproj
 dotnet clean
 ```
 
-### Database Setup
-The application requires MySQL database connection:
+### Database Setup (Docker - Recommended)
+The application automatically manages a PostgreSQL Docker container:
 
 ```bash
-# Start XAMPP MySQL server (if using XAMPP)
-# Navigate to XAMPP control panel and start MySQL
+# Automatic (recommended - just run the application)
+# The VB.NET application will:
+# - Check if Docker is installed
+# - Start Docker Desktop if needed
+# - Start the PostgreSQL container
+# - Initialize database with all tables and seed data
 
-# Import database schema
-mysql -u root -p evalis_db < database/schema.sql
+# Manual startup (optional)
+cd database/docker
+.\start-database.ps1           # Windows PowerShell
+# or
+./start-database.sh            # Linux/WSL/macOS
 
-# Import test data
-mysql -u root -p evalis_db < database/test_data.sql
+# Manual shutdown (optional)
+cd database/docker
+.\stop-database.ps1            # Windows
+# or
+./stop-database.sh             # Linux/WSL/macOS
 ```
+
+**Docker Requirements**:
+- Docker Desktop installed (https://www.docker.com/products/docker-desktop/)
+- For detailed Docker setup: see [docs/DOCKER_SETUP.md](docs/DOCKER_SETUP.md)
 
 ## High-Level Architecture
 
@@ -83,8 +97,8 @@ mysql -u root -p evalis_db < database/test_data.sql
 └──────────────────┬──────────────────────┘
                    │
 ┌──────────────────▼──────────────────────┐
-│      MySQL Database (XAMPP)             │
-│  Shared with Android Mobile App         │
+│   PostgreSQL Database (Docker Container)│
+│  Port 5432, Auto-initialized            │
 └─────────────────────────────────────────┘
 ```
 

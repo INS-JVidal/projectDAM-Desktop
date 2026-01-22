@@ -1,0 +1,65 @@
+# Exclude unnecessary files from Docker build context
+# This reduces build time and image size
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Version control
+.svn
+.hg
+
+# IDE/Editor
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build artifacts
+obj/
+bin/
+*.o
+*.a
+*.so
+
+# VB.NET specific
+*.dll
+*.exe
+*.pdb
+*.vsidx
+
+# Node/npm (if any frontend tooling)
+node_modules/
+npm-debug.log
+
+# Docker
+.dockerignore
+Dockerfile
+
+# Documentation
+*.md
+docs/
+README
+
+# CI/CD
+.github
+.gitlab-ci.yml
+.travis.yml
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Environment files (security)
+.env
+.env.local
+.env.*.local
